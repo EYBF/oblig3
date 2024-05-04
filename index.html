@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bestilling av kinobilletter</title>
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form">
+                <div class="form-group">
+                    <label for="movie">Film</label>
+                    <select id="movie">
+                        <option value="" disabled selected>Velg film her</option>
+                        <option value="film1"> Film 1</option>
+                        <option value="film2"> Film 2</option>
+                        <option value="film3"> Film 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Antall</label>
+                    <input type="text" class="form-control" id="quantity"/>
+                </div>
+                <div class="form-group">
+                    <label for="firstname">Fornavn</label>
+                    <input type="text" class="form-control" id="firstname"/>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Etternavn</label>
+                    <input type="text" class="form-control" id="lastname"/>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefonnr.</label>
+                    <input type="tel" class="form-control" id="phone" pattern="[0-9]{8}">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" class="form-control" id="email"/>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="buyTicket()">Kjøp billett</button><br/>
+        </div>
+        <div class="col-md-8">
+            <h2>Alle billetter</h2>
+            <ul id="ticketList"></ul>
+            <button class="btn btn-primary" onclick="deleteAllTickets()">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
